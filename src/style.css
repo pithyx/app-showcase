@@ -1,0 +1,79 @@
+/* The theme comes from @pithyx/ui/tokens.css and the desktop's --pithyx-* values the SDK sets. */
+body {
+  margin: 0;
+  font-family: var(--pithyx-font-ui, system-ui, sans-serif);
+  color: var(--pithyx-color-text, CanvasText);
+  background: var(--pithyx-color-background, Canvas);
+}
+
+.showcase {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+}
+
+.tabs,
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.methods {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 16px;
+}
+
+@media (width < 640px) {
+  .methods {
+    grid-template-columns: 1fr;
+  }
+}
+
+h2 {
+  margin: 12px 0 6px;
+  font-size: 0.95rem;
+}
+
+pre {
+  margin: 4px 0 0;
+  padding: 8px;
+  overflow: auto;
+  max-height: 60vh;
+  font-family: var(--pithyx-font-mono, monospace);
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--pithyx-color-surface, transparent);
+  border: 1px solid var(--pithyx-color-border, GrayText);
+  border-radius: var(--pithyx-radius, 6px);
+}
+
+.muted {
+  color: var(--pithyx-color-text-muted, GrayText);
+}
+
+.failed {
+  color: var(--pithyx-color-danger, red);
+}
+
+.events {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.components section {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  max-width: 420px;
+}
+
+.context-area {
+  padding: 16px;
+  border: 1px dashed var(--pithyx-color-border, GrayText);
+  border-radius: var(--pithyx-radius, 6px);
+}

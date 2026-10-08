@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/@pithyx/sdk/schema/manifest.v1.schema.json",
+  "manifestVersion": 1,
+  "id": "com.example.showcase",
+  "version": "1.0.0",
+  "name": { "en": "SDK showcase", "de": "SDK-Schaufenster" },
+  "description": {
+    "en": "Every method and event of the Pithyx SDK and every component of @pithyx/ui, to try them on a box.",
+    "de": "Jede Methode und jedes Ereignis des Pithyx-SDK und jede Komponente von @pithyx/ui zum Ausprobieren auf einer Box."
+  },
+  "author": { "name": "Your name" },
+  "license": "MIT",
+  "entry": "frontend/index.html",
+  "sdk": "^1.0.0-rc.3",
+  "permissions": ["notifications", "directory.read", "files.read", "files.write", "files.shares"],
+  "window": {
+    "instances": "multi",
+    "defaultSize": { "width": 960, "height": 680 },
+    "minSize": { "width": 360, "height": 400 }
+  }
+}
