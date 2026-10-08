@@ -1,6 +1,11 @@
 {
   "title": "SDK showcase",
-  "tabs": { "methods": "Methods", "events": "Events", "context": "Context", "components": "Components" },
+  "tabs": {
+    "methods": "Methods",
+    "events": "Events",
+    "context": "Context",
+    "components": "Components"
+  },
   "groups": {
     "window": "Window",
     "desktop": "Desktop",
@@ -11,10 +16,20 @@
     "shares": "Shared folders",
     "trash": "Bin"
   },
-  "result": { "title": "Last result", "empty": "Click a method to call it.", "failed": "Failed: {code}" },
-  "unsupported": "This desktop does not support it",
-  "events": { "empty": "Nothing happened yet. Minimize the window, change the theme or click a notification.", "clear": "Clear" },
-  "close": { "label": "Ask before closing", "question": "The showcase asks before it closes. Close anyway?" },
+  "result": {
+    "title": "Last result",
+    "empty": "Click a method to call it.",
+    "failed": "Failed: {code}"
+  },
+  "events": {
+    "empty": "Nothing happened yet. Minimize the window, change the theme or click a notification.",
+    "clear": "Clear"
+  },
+  "close": {
+    "label": "Ask before closing",
+    "question": "The showcase asks before it closes. Close anyway?",
+    "confirm": "Close"
+  },
   "components": {
     "buttons": "Buttons",
     "primary": "Primary",

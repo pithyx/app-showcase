@@ -19,6 +19,8 @@ newer SDK with a new method or event does not build until the showcase covers it
 
 ## Start
 
+You need Node.js 24 or newer.
+
 ```sh
 npm install
 npm run dev     # the app in the mock desktop of pithyx dev, with hot reload

@@ -1,3 +1,4 @@
+# Tests and packs the app on every push and pull request; a published release gets the .pithyxapp attached.
 name: CI
 
 on:
@@ -11,8 +12,34 @@ permissions:
   contents: read
 
 jobs:
-  app:
-    uses: pithyx/.github/.github/workflows/app.yml@main
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run pack
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pithyxapp
+          path: '*.pithyxapp'
+          if-no-files-found: error
+
+  release:
+    if: github.event_name == 'release'
+    needs: test
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-      packages: write
+    steps:
+      - uses: actions/download-artifact@v5
+        with:
+          name: pithyxapp
+      - run: gh release upload "$TAG" ./*.pithyxapp --repo "$GITHUB_REPOSITORY" --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}

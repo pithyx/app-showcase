@@ -123,7 +123,7 @@ export function Showcase({ app }: { app: PithyxApp }) {
                       size="sm"
                       variant="secondary"
                       onPress={() => void run(method)}
-                      {...(app.supports(method) ? {} : { 'aria-description': t('unsupported') })}
+                      isDisabled={!app.supports(method)}
                     >
                       <code>{method}</code>
                     </Button>
@@ -187,7 +187,7 @@ export function Showcase({ app }: { app: PithyxApp }) {
               {t('components.cancel')}
             </Button>
             <Button variant="primary" onPress={() => void app.window.close()}>
-              OK
+              {t('close.confirm')}
             </Button>
           </>
         }
