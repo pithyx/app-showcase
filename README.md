@@ -4,6 +4,8 @@ Every method and event of `@pithyx/sdk` and every component of `@pithyx/ui` in o
 [Pithyx](https://github.com/pithyx/pithyx) app, written with React. Install it on a box to see what each call does and
 what each event carries, or read `src/` for how to use them.
 
+Part of Pithyx by Schecher1 (https://github.com/Schecher1).
+
 - **Methods**: a button per SDK method (`src/demos.ts`), grouped as window, desktop, logs and data, users and groups,
   backend, files and shared folders, with the last result or the error code beside them. The showcase has no backend,
   so the backend calls show the error an app without one gets. The file calls work in the order of their buttons:
