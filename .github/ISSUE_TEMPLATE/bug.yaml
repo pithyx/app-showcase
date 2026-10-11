@@ -1,0 +1,21 @@
+name: Bug report
+description: Something in this app does not work
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: This app's version and your Pithyx version.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log lines or console output
+      render: text
