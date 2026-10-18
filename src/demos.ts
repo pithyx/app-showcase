@@ -1,9 +1,9 @@
-import type { FileLocation, FileRef, MethodName, PithyxApp } from '@pithyx/sdk';
+import type { FileRef, MethodName, PithyxApp, ShareLocation } from '@pithyx/sdk';
 
 /** What one demo left for the next: a file, a shared folder, a folder watch or a job. */
 export interface DemoState {
   file: FileRef | null;
-  share: FileLocation | null;
+  share: ShareLocation | null;
   watch: string | null;
   job: number | null;
   dirty: boolean;
@@ -27,7 +27,7 @@ export type Demo = (app: PithyxApp, state: DemoState) => Promise<unknown>;
 
 /** The demos grouped as the app shows them; the order inside a group is the order of the buttons. */
 export const groups: Record<string, MethodName[]> = {
-  window: ['window.setTitle', 'window.setSize', 'window.setDirty', 'window.requestAttention', 'window.close'],
+  window: ['window.setTitle', 'window.setSize', 'window.setDirty', 'window.requestAttention', 'window.ready', 'window.close'],
   desktop: ['notify', 'setBadge', 'contextMenu.show', 'clipboard.writeText', 'openUrl', 'ui.showError'],
   data: ['log.write', 'session.save', 'storage.set', 'storage.get', 'storage.keys', 'storage.remove'],
   people: ['directory.users', 'directory.groups'],
@@ -52,7 +52,7 @@ export const groups: Record<string, MethodName[]> = {
 
 const FOLDER = 'Pithyx showcase';
 
-function share(state: DemoState): FileLocation {
+function share(state: DemoState): ShareLocation {
   if (state.share === null) {
     throw new Error('Call files.shares first: it picks the first shared folder you may write to.');
   }
@@ -79,6 +79,7 @@ export const demos = {
     return { dirty: state.dirty };
   },
   'window.requestAttention': (app) => app.window.requestAttention(),
+  'window.ready': (app) => app.window.ready(),
   'window.close': (app) => app.window.close(),
   notify: (app) =>
     app.notify({
