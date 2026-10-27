@@ -22,6 +22,9 @@
     "arm64"
   ],
   "source": "https://github.com/pithyx/app-showcase",
+  "privacy": {
+    "sends": "none"
+  },
   "permissions": {
     "notifications": {
       "reason": {
