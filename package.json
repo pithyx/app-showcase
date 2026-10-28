@@ -12,13 +12,13 @@
     "pack": "npm run build && pithyx pack"
   },
   "dependencies": {
-    "@pithyx/sdk": "1.0.0-rc.9",
-    "@pithyx/ui": "1.0.0-rc.9",
+    "@pithyx/sdk": "2.0.0",
+    "@pithyx/ui": "2.0.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
-    "@pithyx/cli": "1.0.0-rc.9",
+    "@pithyx/cli": "2.0.0",
     "@types/node": "^24.13.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

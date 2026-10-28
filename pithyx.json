@@ -1,6 +1,6 @@
 {
-  "$schema": "./node_modules/@pithyx/sdk/schema/manifest.v1.schema.json",
-  "manifestVersion": 1,
+  "$schema": "./node_modules/@pithyx/sdk/schema/manifest.v2.schema.json",
+  "manifestVersion": 2,
   "id": "com.example.showcase",
   "version": "1.0.0",
   "name": {
@@ -16,14 +16,47 @@
   },
   "license": "MIT",
   "entry": "frontend/index.html",
-  "sdk": "^1.0.0-rc.9",
-  "permissions": [
-    "notifications",
-    "directory.read",
-    "files.read",
-    "files.write",
-    "files.shares"
+  "sdk": "^2.0.0",
+  "arch": [
+    "amd64",
+    "arm64"
   ],
+  "source": "https://github.com/pithyx/app-showcase",
+  "privacy": {
+    "sends": "none"
+  },
+  "permissions": {
+    "notifications": {
+      "reason": {
+        "en": "Shows how an app sends notifications.",
+        "de": "Zeigt, wie eine App Benachrichtigungen sendet."
+      }
+    },
+    "directory.read": {
+      "reason": {
+        "en": "Shows how an app lists the users and groups of the box.",
+        "de": "Zeigt, wie eine App die Benutzer und Gruppen der Box auflistet."
+      }
+    },
+    "files.read": {
+      "reason": {
+        "en": "Shows how an app opens files you pick.",
+        "de": "Zeigt, wie eine App Dateien öffnet, die du auswählst."
+      }
+    },
+    "files.write": {
+      "reason": {
+        "en": "Shows how an app saves files where you choose.",
+        "de": "Zeigt, wie eine App Dateien dort speichert, wo du es wählst."
+      }
+    },
+    "files.shares": {
+      "reason": {
+        "en": "Shows how an app works in the shared folders you may use.",
+        "de": "Zeigt, wie eine App in den freigegebenen Ordnern arbeitet, die du nutzen darfst."
+      }
+    }
+  },
   "window": {
     "instances": "multi",
     "defaultSize": {
