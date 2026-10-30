@@ -1,10 +1,10 @@
 {
   "title": "SDK-Schaufenster",
   "tabs": {
-    "methods": "Methoden",
     "events": "Ereignisse",
     "context": "Kontext",
-    "components": "Komponenten"
+    "components": "Komponenten",
+    "patterns": "Muster"
   },
   "groups": {
     "window": "Fenster",
@@ -23,7 +23,10 @@
   },
   "events": {
     "empty": "Noch ist nichts passiert. Minimiere das Fenster, wechsle das Design oder klicke auf eine Benachrichtigung.",
-    "clear": "Leeren"
+    "clear": "Leeren",
+    "time": "Zeit",
+    "event": "Ereignis",
+    "data": "Daten"
   },
   "close": {
     "label": "Vor dem Schließen fragen",
@@ -64,5 +67,40 @@
     "dialogText": "Der Entwurf ist dann endgültig weg.",
     "cancel": "Abbrechen",
     "chose": "Gewählt: {item}"
+  },
+  "nav": {
+    "sdk": "SDK",
+    "app": "Dieses Fenster",
+    "ui": "@pithyx/ui",
+    "search": "Suchen"
+  },
+  "methods": {
+    "title": "Methoden"
+  },
+  "status": {
+    "last": "Letzter Aufruf: {method}"
+  },
+  "patterns": {
+    "name": "Name",
+    "size": "Größe",
+    "state": "Zustand",
+    "table": "Dateien",
+    "files": "Dateien",
+    "filesDetail": "in diesem Ordner",
+    "used": "Belegt",
+    "synced": "Synchronisiert",
+    "syncedDetail": "2 warten",
+    "attention": "Notes.md wurde auf zwei Geräten geändert",
+    "attentionDetail": "Wähle, welche Fassung bleibt.",
+    "resolve": "Klären…",
+    "cardTitle": "Dokumente",
+    "cardFacts": "3 Dateien · zuletzt geändert heute",
+    "cardDetails": "Eine Karte zeigt ein Objekt mit Zustand; Details und Aktionen öffnen sich mit dem Pfeil.",
+    "settings": "Einstellungen",
+    "states": {
+      "synced": "Synchronisiert",
+      "uploading": "Wird hochgeladen",
+      "conflict": "Konflikt"
+    }
   }
 }
