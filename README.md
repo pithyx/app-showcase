@@ -35,7 +35,7 @@ npm test        # type check, build, pithyx validate and the unit tests
 npm run pack    # writes <id>-<version>.pithyxapp
 ```
 
-Install the `.pithyxapp` on your box in the Store (gear, Install from file). It asks for `notifications`,
+Install the `.pithyxapp` on your box in the Store (**Installed**, **Install from file**). It asks for `notifications`,
 `directory.read`, `files.read`, `files.write` and `files.shares`, so the Store suggests it for administrators only.
 
 ## Bring it to a box
@@ -48,7 +48,7 @@ There are two ways:
   catalog's CI builds the app from the merged commit and publishes it; boxes install it from the Store and get its
   updates. You never publish a package or an image yourself.
 - **A sideload**, for your own box and for testing: `npm run pack` writes the `.pithyxapp`; install it in the Store
-  (gear, Install from file). A sideload is marked unverified and gets no updates unless a catalog has the same id.
+  (**Installed**, **Install from file**). A sideload is marked unverified and gets no updates unless a catalog has the same id.
 
 ## License
 
