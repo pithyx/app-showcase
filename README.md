@@ -6,15 +6,20 @@ what each event carries, or read `src/` for how to use them.
 
 Part of Pithyx by Schecher1 (https://github.com/Schecher1).
 
-- **Methods**: a button per SDK method (`src/demos.ts`), grouped as window, desktop, logs and data, users and groups,
-  backend, files and shared folders, with the last result or the error code beside them. The showcase has no backend,
+The app is laid out after the [design guidelines](https://pithyx.org/docs/developers/apps/design/): an `AppFrame` with
+a navigation column (`NavList`) and a page per group, which turns into a list page in a narrow window.
+
+- **Methods**: a button per SDK method (`src/demos.ts`), one page per group: window, desktop, logs and data, users and groups,
+  backend, files and shared folders, with the last result or the error code below them. The showcase has no backend,
   so the backend calls show the error an app without one gets. The file calls work in the order of their buttons:
   `files.shares` picks a shared folder you may write to, `files.createFolder` and `files.upload` make a file there.
-- **Events**: every SDK event as it arrives (`src/events.ts`); minimize the window, change the theme or the language,
+- **Events**: every SDK event as it arrives (`src/events.ts`), in a `DataTable`; minimize the window, change the theme or the language,
   or click the showcase's notification to see them. The app also answers `beforeClose` (with its own dialog when "Ask
   before closing" is on) and `beforeUnload`.
 - **Context**: what the desktop told the app, kept current by the events.
 - **Components**: every component of `@pithyx/ui`.
+- **Patterns**: the patterns an app with more than one view is built from, on sample data: `SummaryTiles`,
+  `AttentionList`, `DataTable` with `StatusBadge`, `Card` with `Meter`, and `FormSection` with `FormRow`.
 
 Both lists are checked against the SDK's types (`satisfies Record<MethodName, ...>` and `Record<EventName, ...>`), so a
 newer SDK with a new method or event does not build until the showcase covers it.

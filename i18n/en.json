@@ -1,10 +1,10 @@
 {
   "title": "SDK showcase",
   "tabs": {
-    "methods": "Methods",
     "events": "Events",
     "context": "Context",
-    "components": "Components"
+    "components": "Components",
+    "patterns": "Patterns"
   },
   "groups": {
     "window": "Window",
@@ -23,7 +23,10 @@
   },
   "events": {
     "empty": "Nothing happened yet. Minimize the window, change the theme or click a notification.",
-    "clear": "Clear"
+    "clear": "Clear",
+    "time": "Time",
+    "event": "Event",
+    "data": "Data"
   },
   "close": {
     "label": "Ask before closing",
@@ -64,5 +67,40 @@
     "dialogText": "The draft goes for good.",
     "cancel": "Cancel",
     "chose": "Chosen: {item}"
+  },
+  "nav": {
+    "sdk": "SDK",
+    "app": "This window",
+    "ui": "@pithyx/ui",
+    "search": "Search"
+  },
+  "methods": {
+    "title": "Methods"
+  },
+  "status": {
+    "last": "Last call: {method}"
+  },
+  "patterns": {
+    "name": "Name",
+    "size": "Size",
+    "state": "State",
+    "table": "Files",
+    "files": "Files",
+    "filesDetail": "in this folder",
+    "used": "Used",
+    "synced": "Synced",
+    "syncedDetail": "2 waiting",
+    "attention": "Notes.md changed on two devices",
+    "attentionDetail": "Choose which version to keep.",
+    "resolve": "Resolve…",
+    "cardTitle": "Documents",
+    "cardFacts": "3 files · last change today",
+    "cardDetails": "A card shows an object with a state; its details and actions open with the chevron.",
+    "settings": "Settings",
+    "states": {
+      "synced": "Synced",
+      "uploading": "Uploading",
+      "conflict": "Conflict"
+    }
   }
 }
