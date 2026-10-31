@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "entry": "frontend/index.html",
-  "sdk": "^2.1.0",
+  "sdk": "^2.2.0",
   "arch": [
     "amd64",
     "arm64"
